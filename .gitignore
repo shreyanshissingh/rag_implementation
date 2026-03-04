@@ -1,0 +1,23 @@
+# Ignore all files in the node_modules directory
+node_modules/
+
+# Ignore all .log files
+*.log
+
+# Ignore all .tmp files
+*.tmp
+
+# Ignore all .swp files (created by Vim)
+*.swp
+
+# Ignore all .swo files (created by Vim)
+*.swo
+
+# Ignore all .swx files (created by Vim)
+*.swx
+
+# Ignore all .DS_Store files (created by macOS)
+.DS_Store
+
+# Ignore all .env files (for environment variables)
+.env
