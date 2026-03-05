@@ -62,6 +62,7 @@ dependencies = [
     "langchain-classic==1.0.1",
     "langchain-community==0.4.1",
     "langchain-core==1.2.13",
+    "langchain-ollama>=1.0.1",
     "langchain-text-splitters==1.1.0",
     "langgraph==1.0.8",
     "langgraph-checkpoint==4.0.0",
