@@ -67,7 +67,7 @@ def create_rag_prompt(role: str, question: str, context: str,
     prompt_template = PromptTemplate(
         input_variables=["role", "question", "rag_context", "instructions"],
         template="""
-You are a {role}. Use the following context to answer the following question:
+        {role}. Use the following context to answer the following question:
 
 Context: 
 {rag_context}
