@@ -6,7 +6,7 @@ Handles text embedding generation using SentenceTransformer.
 
 import numpy as np
 from sentence_transformers import SentenceTransformer
-from typing import List
+from typing import Any, List
 
 
 class EmbeddingManager:
@@ -32,11 +32,11 @@ class EmbeddingManager:
             print(f" Error in loading model {self.model_name}: {e}")
             raise
     
-    def generate_embeddings(self, texts: List[str]) -> np.ndarray:
+    def generate_embeddings(self, chunks: List[Any]) -> np.ndarray:
         """Generate embeddings for list of text
         
         Args:
-            texts: List of text strings to embed
+            chunks: List of text strings or Document objects to embed
             
         Returns:
             numpy array of embeddings
@@ -44,7 +44,10 @@ class EmbeddingManager:
         if not self.model:
             raise ValueError("Model not loaded")
         
+         # Extract text from Document objects if needed
+        text_list = [doc.page_content if hasattr(doc, 'page_content') else doc for doc in chunks]
+
         print(f"Generating embeddings...")
-        embeddings = self.model.encode(texts, show_progress_bar=True)
+        embeddings = self.model.encode(text_list, show_progress_bar=True)
         print(f"Generated embeddings ✅")
         return embeddings

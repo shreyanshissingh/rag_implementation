@@ -4,7 +4,7 @@ Data Ingestion Module
 Handles PDF loading and document chunking for RAG system.
 """
 
-from langchain_community.document_loaders import PyPDFLoader
+from langchain_community.document_loaders import PyPDFLoader ,UnstructuredXMLLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from pathlib import Path
 from typing import List, Any
@@ -66,21 +66,24 @@ class DataIngestionManager:
         print(f"\n Total documents loaded: {len(all_documents)}")
         return all_documents
     
+
+    
     def split_documents_in_chunks(self, documents: List[Document]) -> List[Document]:
-        """Split documents into chunks
-        
-        Args:
-            documents: List of documents to chunk
             
-        Returns:
-            List of document chunks
-        """
-        split_chunks = self.text_splitter.split_documents(documents)
-        print(f"Split {len(documents)} documents into {len(split_chunks)} chunks")
+            """Split documents into chunks
+    
+            Args:
+                documents: List of documents to chunk
         
-        if split_chunks:
-            print(f"Sample chunk --> \n")
-            print(f"{split_chunks[0].page_content[:150]}")
-            print(f"{split_chunks[0].metadata}")
-        
-        return split_chunks
+            Returns:
+                List of document chunks
+            """
+            split_chunks = self.text_splitter.split_documents(documents)
+            print(f"Split {len(documents)} documents into {len(split_chunks)} chunks")
+    
+            if split_chunks:
+                print(f"Sample chunk --> \n")
+                print(f"{split_chunks[0].page_content[:150]}")
+                print(f"{split_chunks[0].metadata}")
+    
+            return split_chunks
