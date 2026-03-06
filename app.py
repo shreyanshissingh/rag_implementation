@@ -54,8 +54,8 @@ if __name__ == "__main__":
 
     #Step-1 - Retrieve relevant context from vector store using RAGRetriever
     retrieved_context = rag_advanced(question,rag_retriever, top_k=3)
-    print("=================================================================")
-    print(f"Retrieved {len(retrieved_context)} relevant documents for the query.")
+    print("==================================================================================================================================")
+    # print(f"Retrieved {len(retrieved_context)} relevant documents for the query.")
     context_text = retrieved_context.get('context')
     clean_context = ' '.join(context_text.split())
     # print(clean_context)
@@ -68,12 +68,14 @@ if __name__ == "__main__":
 
     #Step-3 - Generate response from LLM based on the RAG prompt
     llm_response = llm_manager.generate_response(rag_prompt)
-    print("=================================================================")
-    print(f"LLM Response:\n{llm_response}")
+    # print("=================================================================")
+    # print(f"LLM Response:\n{llm_response}")
 
     #Step-4 - Format the final response to the user (if needed, based on instructions)
     final_response = format_rag_response(question, llm_response,retrieved_context)
-    print("=================================================================")
+    print("==================================================================================================================================")
+    print(f"Role:\n{role_description}")
+    print("==================================================================================================================================")
     print(f"Final Response to User:\n{final_response}")
     
 

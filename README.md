@@ -2,25 +2,40 @@
 
 This directory contains a refactored, modular version of the RAG (Retrieval-Augmented Generation) system extracted from `chapter_1.ipynb`.
 
+## Demo - Question & Answering Examples
+
+The RAG system enables intelligent document retrieval and question-answering capabilities. Below are example screenshots showing the system in action:
+
+### Q&A Demonstration
+
+![Q&A Example 1](sample_response_images/Screenshot%202026-03-06%20at%2010.40.22%20AM.png)
+
+![Q&A Example 2](sample_response_images/Screenshot%202026-03-06%20at%2010.45.57%20AM.png)
+
+![Q&A Example 3](sample_response_images/Screenshot%202026-03-06%20at%2010.48.03%20AM.png)
+
+![Q&A Example 4](sample_response_images/Screenshot%202026-03-06%20at%2010.51.18%20AM.png)
+
 ## Project Structure
 
 ```
 rag_implementation/
-├── main.py                  # Entry point and RAGSystem orchestrator
-├── src/                     # Source modules
-│   ├── __init__.py         # Package initialization
-│   ├── config.py           # Configuration settings
-│   ├── data_ingestion.py   # Document loading and chunking
-│   ├── embedding_manager.py # Text embedding generation
-│   ├── vector_store.py     # ChromaDB vector store management
-│   ├── rag_retriever.py    # RAG retrieval logic
-│   └── llm_interface.py    # LLM interaction interface
-├── notebook/               # Original Jupyter notebooks
-│   └── chapter_1.ipynb     # Original notebook (unmodified)
-├── raw_docs/               # Raw PDF documents
-├── data/                   # Data directory
-│   └── vector_store/       # ChromaDB persistent storage
-└── README_MODULAR.md      # This file
+├── main.py                      # Entry point and RAGSystem orchestrator
+├── src/                         # Source modules
+│   ├── __init__.py             # Package initialization
+│   ├── config.py               # Configuration settings
+│   ├── data_ingestion.py       # Document loading and chunking
+│   ├── embedding_manager.py    # Text embedding generation
+│   ├── vector_store.py         # ChromaDB vector store management
+│   ├── rag_retriever.py        # RAG retrieval logic
+│   └── llm_interface.py        # LLM interaction interface
+├── notebook/                   # Original Jupyter notebooks
+│   └── chapter_1.ipynb         # Original notebook (unmodified)
+├── raw_docs/                   # Raw PDF documents
+├── data/                       # Data directory
+│   └── vector_store/           # ChromaDB persistent storage
+├── sample_response_images/     # Q&A demonstration screenshots
+└── README.md                   # This file
 ```
 
 ## Modules Overview
