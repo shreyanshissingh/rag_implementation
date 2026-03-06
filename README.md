@@ -8,13 +8,13 @@ The RAG system enables intelligent document retrieval and question-answering cap
 
 ### Q&A Demonstration
 
-![Q&A Example 1](qa-example-1.png)
+![Q&A Example 1](sample_response_images/qa-example-1.png)
 
-![Q&A Example 2](qa-example-2.png)
+![Q&A Example 2](sample_response_images/qa-example-2.png)
 
-![Q&A Example 3](qa-example-3.png)
+![Q&A Example 3](sample_response_images/qa-example-3.png)
 
-![Q&A Example 4](qa-example-4.png)
+![Q&A Example 4](sample_response_images/qa-example-4.png)
 
 ## Project Structure
 
